@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+
+<body id="corpo">
+    <main>
+        <header class="header">
+            <h1>Calculadora de IMC: Avalie Sua Saúde de Forma Simples e Rápida</h1>
+        </header>
+        <div class="div1">
+            <h2>Descubra Seu IMC e Melhore Sua Qualidade de Vida</h2>
+        </div>
+        <p class="texto">Avaliar seu Índice de Massa Corporal (IMC) é um passo importante para entender melhor sua saúde. O IMC é
+            uma medida prática e amplamente usada para indicar se o seu peso está adequado para a sua altura,
+            ajudando a identificar possíveis riscos de saúde relacionados ao peso corporal. Com a nossa calculadora
+            de IMC, você pode descobrir rapidamente sua classificação de peso e obter informações que o ajudarão a
+            tomar decisões mais conscientes sobre seu bem-estar. Basta informar seu peso e altura para ver seu
+            resultado e as recomendações de acordo com sua faixa de IMC. Vamos começar essa jornada pela sua saúde!
+        </p>
+
+        <div class="div2">
+            <label for="altura"> Altura:</label>
+            <input type="number" name="altura" id="altura">
+
+            <label for="peso"> Peso (Kg):</label>
+            <input type="number" name="peso" id="peso">
+
+            <button class="botao" onclick="calcImc()">Calcular IMC</button>
+
+            <p>Seu Índice de massa corporal é: <span id="resultado"></span></p>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+       &copy; Todos os Direitos Reservados | 2024
+    </footer>
+
+    <script>
+        function calcImc() {
+            const altura = document.getElementById("altura").value;
+            const peso = document.getElementById("peso").value;
+            const resultado = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+        }
+
+        function mudarTema() {
+            const corpo = document.getElementById("corpo");
+             corpo.style.backgroundColor = corpo.style.backgroundColor === "black" ? "red" : "black"
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
